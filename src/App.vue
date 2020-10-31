@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Search/>
+    <Movie/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Movie from './components/Movie.vue'
+import Search from './components/Search.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Movie,
+    Search
   }
 }
 </script>
@@ -24,5 +27,31 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.movie {
+    display: flex;
+    margin: auto;
+    width: 1000px;
+}
+.movie img {
+    width: auto;
+    height: 500px;
+    padding: 0 20px 40px 0;
+}
+
+.item-wrap h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.item-wrap p {
+    margin: 10px 0;
+    padding: 0;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    text-align: justify;
 }
 </style>
